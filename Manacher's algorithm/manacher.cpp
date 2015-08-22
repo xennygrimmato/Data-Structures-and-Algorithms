@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 //reference http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-ii.html
+//a sample problem which needs this algorithm - http://www.spoj.com/problems/MSUBSTR/
 int manacher_algorithm(string x)
 {
     string y="#";
