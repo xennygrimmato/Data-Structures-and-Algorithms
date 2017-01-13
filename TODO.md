@@ -7,4 +7,4 @@ A list of data strucctures and algorithms yet to be added:
 - Bridges in a Graph
 - Disjoint Set Union
 - KMP String Matching
- - Suffix Tree
+- Suffix Tree
