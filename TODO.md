@@ -9,3 +9,6 @@ A list of data strucctures and algorithms yet to be added:
 - KMP String Matching
 - Suffix Tree
 - FFT
+- LCA
+- Strongly Connected Components
+- Aho-Corasick
