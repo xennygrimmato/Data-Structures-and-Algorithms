@@ -1,15 +1,22 @@
-#include<bits/stdc++.h>
-#include<ext/pb_ds/assoc_container.hpp>
-#include<ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
-template <typename T>
-using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-
+using namespace __gnu_pbds;
+typedef tree<int ,null_type,less<int>,rb_tree_tag,
+              tree_order_statistics_node_update>pbd_set;
+/*This Function sorts the Data in increasing order and then Retrieves
+  information by order on the n-th level from lowest to highest 
+  every operation is fastest possible */              
+  
 int main(){
-	ordered_set<int>  s;
-	s.insert(1); 
-	s.insert(3);
-	cout << s.order_of_key(2) << endl; // the number of elements in the s less than 2
-	cout << *s.find_by_order(0) << endl; // print the 0-th smallest number in s(0-based)
+    pbd_set s;
+    s.insert(4);s.insert(11);s.insert(12);s.insert(1);s.insert(7); //insert
+    s.erase(4);                                                    //erase
+
+    int n=4,ans;n--;
+    if(s.order_of_key(n) != s.end()){                             //find
+       ans = *s.order_of_key(n);printf("%d\n",ans);}
+    else printf("invalid\n");
+
 }
