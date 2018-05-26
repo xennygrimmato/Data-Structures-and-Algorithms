@@ -15,3 +15,5 @@ A list of data strucctures and algorithms yet to be added:
 - Matrix Operations
 - Rolling Hash (Rabin-Karp)
 - Centroid Decomposition
+- Gauss Elimination
+- BIT (PointUpdate+RangeQuery, RangeUpdate+RangeQuery)
