@@ -4,4 +4,4 @@
   - `<algorithm-name>.cpp`: Template for the algorithm
   - `example.cpp`: Usage of the algorithm to get a problem accepted on Codeforces/Codechef
   - `README.md`: List of URLs to related problems
-- Create a Pull Request with your changes and add `xennygrimmato` as reviewer
+- Create a Pull Request with your changes and add [xennygrimmato](github.com/xennygrimmato) as reviewer
