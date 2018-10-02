@@ -5,6 +5,8 @@ Hello, world! This effort is directed towards making a compilation of some inter
 
 In the coming months, I hope to have a variety of data structures and algorithms here.
 
-Feel free to create PRs.
+Feel free to create PRs and issues on the repo.
 
 Report bugs/issues/suggestions to xennygrimmato (vstulsyan@gmail.com)
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contribution instructions.
