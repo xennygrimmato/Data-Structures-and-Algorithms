@@ -16,7 +16,7 @@ using namespace std;
 ll dis[MAX];
 bool visit[MAX];
 vector<pii> edge[MAX];
-void dijkstra(ll src,ll dest)
+void dijkstra(ll src)
 {
     priority_queue<pii,vector<pii>,greater<pii> > pq;
     while(!pq.empty())
@@ -65,7 +65,7 @@ int main()
      visit[i]=false;
     }
     cin>>src;
-    dijkstra(src,n);
+    dijkstra(src);
     loop1(i,1,n)
     cout<<dis[i]<<" ";
     cout<<endl;
