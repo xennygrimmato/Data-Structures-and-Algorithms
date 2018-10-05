@@ -6,12 +6,12 @@ using namespace std;
 const double EPS = 1E-9;
 const int INF = INT_MAX;
 
-int gauss(const vector <vector<double>>& a, vector <double> &ans) {
+int gauss(vector<vector<double>> a, vector<double> &ans) {
   // assuming a is a n x m matrix
   int n = (int)a.size();
   int m = (int)a[0].size() - 1;
 
-  vector <int> where(m, -1);
+  vector<int> where(m, -1);
   for (int col = 0, row = 0; col < m && row < n; ++col) {
     int sel = row;
     for (int i = row; i < n; ++i) {
@@ -48,9 +48,9 @@ int gauss(const vector <vector<double>>& a, vector <double> &ans) {
     }
   }
 
-  for (int i=0; i<n; ++i) {
+  for (int i = 0; i < n; ++i) {
     double sum = 0;
-    for (int j=0; j<m; ++j) {
+    for (int j = 0; j < m; ++j) {
       sum += ans[j] * a[i][j];
     }
 
@@ -59,7 +59,7 @@ int gauss(const vector <vector<double>>& a, vector <double> &ans) {
     }
   }
 
-  for (int i=0; i<m; ++i) {
+  for (int i = 0; i < m; ++i) {
     if (where[i] == -1) {
       return INF;
     }
