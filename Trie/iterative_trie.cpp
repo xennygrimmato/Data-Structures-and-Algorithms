@@ -1,3 +1,4 @@
+// C++ implementation of trie
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -11,7 +12,7 @@ int sz = 0;
 int next[27][MaxN];
 int end[MaxN];
 bool created[MaxN];
-
+// insert key into trie
 void insert (string &s) {
 	int v = 0;
 
@@ -25,7 +26,7 @@ void insert (string &s) {
 	}
 	++end[v];
 }
-
+// return true if key present in trie and
 bool search (string tmp) {
 	int v = 0;
 	
@@ -39,9 +40,11 @@ bool search (string tmp) {
 }
 
 int main () {
+	// keys supports lowercase and uppercase letters
 	string keys[] = {"hi", "hello", "you", "ekta", "me"};
 	string output[] = {"NO", "YES"};
 
+	// construct trie
 	for (int i = 0; i < 5; ++i)
 		insert (keys[i]);
 
