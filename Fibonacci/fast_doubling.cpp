@@ -1,7 +1,9 @@
 /* Fast Doubling Method - Fibonacci */
 #include <bits/stdc++.h>
-#define REP(i,n) for (int i = 1; i <= n; i++)
 using namespace std;
+
+#define MOD 1000000007;
+long long int a,b,c,d;
 
 void fast_fib(long long int n,long long int ans[])
 {
