@@ -8,9 +8,8 @@ void sieveOptimized(int N) {
         isPrime[i] = 1;
     for (int i = 2; i * i <= N; i++) {
             if (isPrime[i]) {
-            // For further optimization, You can do instead of j += i, j += (2 * i).
             // Proof is left to reader :)
-            for (int j = i * i; j <= N; j += i) 
+            for (int j = i * i; j <= N; j += (2 * i)) 
                 isPrime[j] = 0;
         }
     }
