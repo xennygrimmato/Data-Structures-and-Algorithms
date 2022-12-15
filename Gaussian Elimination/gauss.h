@@ -19,22 +19,13 @@ public:
 
   double Det();
 
-  2DArray T();
-  void TSelf();
-
-  2DArray Inv();
-  void InvSelf();
-
   double Index(int I, int J);
   void SetIndex(int I, int J, double value);
 
-  void AddRow(std::vector<double> row);
   void AddColumn(std::vector<double> column);
 
   int W() const;
   int H() const;
-
-  int Rank();
 
 private:
 	std::vector<std::vector<double>> _core;
