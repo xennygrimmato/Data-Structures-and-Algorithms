@@ -7,29 +7,29 @@
 int ArrayDims(double *arr);
 int ArrayDims(double **arr);
 
-class 2DArray
+class Array2D
 {
-public:
-  2DArray(int N, int M);
+    public:
+        Array2D(int N, int M);
 
-  explicit 2DArray(double **arr);
-  explicit 2DArray(std::vector<std::vector<double>> arr);
+        explicit Array2D(double **arr);
+        explicit Array2D(std::vector<std::vector<double>> arr);
 
-  ~2DArray();
+        ~Array2D();
 
-  double Det();
+        double Det();
 
-  double Index(int I, int J);
-  void SetIndex(int I, int J, double value);
+        double Index(int I, int J);
+        void SetIndex(int I, int J, double value);
 
-  void AddColumn(std::vector<double> column);
+        void AddColumn(std::vector<double> column);
 
-  int W() const;
-  int H() const;
+        int W() const;
+        int H() const;
 
-private:
-	std::vector<std::vector<double>> _core;
+    private:
+        std::vector<std::vector<double>> _core;
 };
 
-std::vector<double> Gauss(2DArray A, std::vector<double> b);
+std::vector<double> Gauss(Array2D A, std::vector<double> b);
 #endif
