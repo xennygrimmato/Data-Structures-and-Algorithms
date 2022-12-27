@@ -1,3 +1,5 @@
+// Sample AC submission: https://codeforces.com/contest/1731/submission/186979283
+
 // 1D Problem: You are given an array of numbers A[] of size n and a number k ≤ n. Find the minimum value for each continuous subarray of size k.
 // 2D Problem: You are given an matrix of numbers A[][] of size n × m and two numbers k ≤ n, l ≤ m. Find the minimum value for each continuous submatrix of size k × l.
 // Blog: https://codeforces.com/blog/entry/53810
