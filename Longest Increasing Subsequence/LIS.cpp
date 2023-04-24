@@ -12,10 +12,24 @@ int LIS()
     for(int i=0;i<n;i++)
     {
         cin>>elem;
-        //vector<int>::iterator it = upper_bound(d.begin(),d.end(),elem); // non-decreasing
-        vector<int>::iterator it = lower_bound(d.begin(),d.end(),elem); // strictly increasing
-        if(it == d.end()) d.push_back(elem);
-        else *it=elem;
+        d.push_back(elem);
     }
-    cout<<d.size();
+    int dp[n];
+    for(int i=0;i<n;i++){
+        dp[i]=1;
+    }
+    for(int i=2;i<n;i++){
+        for(int j=i-1;j>=0;j--){
+            if(d[i]>=d[j]){
+                dp[i]=max(dp[i],dp[j]+1);
+            }
+        }
+    }
+    int ans=INT_MIN;
+    for(int i=0;i<n;i++){
+        if(ans<dp[i]){
+            ans=dp[i];
+        }
+    }
+    cout<<ans<<endl;
 }
