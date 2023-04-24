@@ -1,28 +1,44 @@
-/* Fast Doubling Method - Fibonacci */
 #include <bits/stdc++.h>
-#define REP(i,n) for (int i = 1; i <= n; i++)
+
 using namespace std;
 
-typedef long long ll;
+#define MOD 1000000007;
+long long int a,b,c,d;
 
-map<long long, long long> F;
-
-ll m=1000000007;
-
-long long f(long long n) {
-	if (F.count(n))
-		return F[n];
-	long long k = n / 2;
-	if (n % 2 == 0) { // n=2*k
-		return F[n] = (f(k) * f(k) + f(k - 1) * f(k - 1)) % m;
-	} else { // n=2*k+1
-		return F[n] = (f(k) * f(k + 1) + f(k - 1) * f(k)) % m;
-	}
+void fast_fib(long long int n,long long int ans[])
+{
+    if(n == 0)
+    {
+        ans[0] = 0;
+        ans[1] = 1;
+        return;
+    }
+    fast_fib((n/2),ans);
+    a = ans[0];             /* F(n) */
+    b = ans[1];             /* F(n+1) */
+    c = 2*b - a;
+    if(c < 0)
+        c += MOD;
+    c = (a * c) % MOD;      /* F(2n) */
+    d = (a*a + b*b) % MOD;  /* F(2n + 1) */
+    if(n%2 == 0)
+    {
+        ans[0] = c;
+        ans[1] = d;
+    }
+    else
+    {
+        ans[0] = d;
+        ans[1] = c+d;
+    }
 }
 
 int main()
 {
-    F[0] = F[1] = 1;
-    ll n;cin >> n; // This answers the term n
-    cout << f(n-1);
+    long long int n;        /* nth value to be found */
+    scanf("%lld",&n);
+    long long int ans[2]={0};
+    fast_fib(n,ans);
+    printf("%lld\n", ans[0]);
+    return 0;
 }
