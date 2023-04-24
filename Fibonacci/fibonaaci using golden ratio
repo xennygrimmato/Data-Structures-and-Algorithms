@@ -1,0 +1,42 @@
+// C++ program to find n-th fibonacci
+#include <bits/stdc++.h> 
+using namespace std; 
+
+// Approx value of golden ratio 
+double golden = 1.6180339; 
+
+int fib[6] = { 0, 1, 1, 2, 3, 5 }; 
+
+// function to find nth Fibonacci number 
+int fibonacci (int n) 
+{ 
+	
+	if (n < 6) 
+	   return fib[n]; 
+
+	// counting from 5th term
+	int j = 5, fibn = 5; 
+
+	while (j < n) { 
+  
+  // function to round off the value
+		fibn = round(fibn * golden); 
+		j++; 
+	} 
+
+	
+  return fibn; 
+} 
+
+
+int main() 
+{ 
+	int n = 9; 
+
+// print nth fibonacci 
+
+	cout << n <<"th Fibonacci:"
+		<< fibonacci(n) << endl; 
+
+	return 0; 
+} 
